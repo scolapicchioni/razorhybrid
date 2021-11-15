@@ -1,0 +1,33 @@
+﻿@using PhotoSharingApplication.Core.Entities
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+@model Photo
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<div class="card card-tilted">
+	<img src="/photos/image/@Model.Id" class="card-img-top" alt="@Model.Title"/>
+	<div class="card-body">
+		<h5 class="card-title">@Model.Title</h5>
+		<p class="card-text">@Model.Description</p>
+		<p class="card-subtitle text-muted">Submitted By @Model.SubmittedBy On @Model.SubmittedOn.ToShortDateString() @Model.SubmittedOn.ToShortTimeString()</p>
+	</div>
+	
+	<div class="card-footer">
+		@if (ViewData["ShowDetailsButton"] is bool showDetailsButton && showDetailsButton) { 
+			<a asp-page="./Details" asp-route-id="@Model.Id" class="card-link">Details</a>
+		}
+		@if (ViewData["ShowDeleteButton"] is bool showDeleteButton && showDeleteButton && (await AuthorizationService.AuthorizeAsync(User, Model, "PhotoDeletionPolicy")).Succeeded) { 
+			<a asp-page="./Delete" asp-route-id="@Model.Id" class="card-link">Delete</a>
+		}
+		@if (ViewData["ShowConfirmDeleteButton"] is bool showConfirmDeleteButton && showConfirmDeleteButton && (await AuthorizationService.AuthorizeAsync(User, Model, "PhotoDeletionPolicy")).Succeeded) { 
+			<form method="post">
+				<input type="submit" class="btn btn-danger" value="Confirm Deletion" />
+			</form>
+		}
+	</div>
+	
+</div>

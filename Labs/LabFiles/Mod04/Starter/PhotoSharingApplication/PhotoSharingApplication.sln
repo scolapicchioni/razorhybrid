@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoSharingApplication.Web", "PhotoSharingApplication.Web\PhotoSharingApplication.Web.csproj", "{08FDC6DA-D60E-4D62-9D7D-EC4018752178}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoSharingApplication.Core", "PhotoSharingApplication.Core\PhotoSharingApplication.Core.csproj", "{7A4CAC3F-560E-4D65-A63D-AFBFDA574D0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoSharingApplication.Infrastructure", "PhotoSharingApplication.Infrastructure\PhotoSharingApplication.Infrastructure.csproj", "{56D995C6-3F57-4197-B13C-293C0F3D645D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{08FDC6DA-D60E-4D62-9D7D-EC4018752178}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08FDC6DA-D60E-4D62-9D7D-EC4018752178}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08FDC6DA-D60E-4D62-9D7D-EC4018752178}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08FDC6DA-D60E-4D62-9D7D-EC4018752178}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A4CAC3F-560E-4D65-A63D-AFBFDA574D0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A4CAC3F-560E-4D65-A63D-AFBFDA574D0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A4CAC3F-560E-4D65-A63D-AFBFDA574D0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A4CAC3F-560E-4D65-A63D-AFBFDA574D0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56D995C6-3F57-4197-B13C-293C0F3D645D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56D995C6-3F57-4197-B13C-293C0F3D645D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56D995C6-3F57-4197-B13C-293C0F3D645D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56D995C6-3F57-4197-B13C-293C0F3D645D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E9A585CC-05EC-45E8-8818-CC2F58AF6E61}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "08fdc6da-d60e-4d62-9d7d-ec4018752178": {
+      "ProjectGuid": "08fdc6da-d60e-4d62-9d7d-ec4018752178",
+      "DisplayName": "PhotoSharingApplication.Web",
+      "ColorIndex": 0
+    },
+    "7a4cac3f-560e-4d65-a63d-afbfda574d0a": {
+      "ProjectGuid": "7a4cac3f-560e-4d65-a63d-afbfda574d0a",
+      "DisplayName": "PhotoSharingApplication.Core",
+      "ColorIndex": 1
+    },
+    "56d995c6-3f57-4197-b13c-293c0f3d645d": {
+      "ProjectGuid": "56d995c6-3f57-4197-b13c-293c0f3d645d",
+      "DisplayName": "PhotoSharingApplication.Infrastructure",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "f38d720a-dae6-4091-8dc8-b0c6862e150c": {
+      "ProjectGuid": "f38d720a-dae6-4091-8dc8-b0c6862e150c",
+      "DisplayName": "PhotoSharingApplication.Blazor.Server",
+      "ColorIndex": 3
+    },
+    "d0caf87e-fb74-43ca-870a-5301a91dbbe8": {
+      "ProjectGuid": "d0caf87e-fb74-43ca-870a-5301a91dbbe8",
+      "DisplayName": "PhotoSharingApplication.Blazor.Client",
+      "ColorIndex": 4
+    },
+    "c308698b-c8db-4fe0-bd8d-169fab359a35": {
+      "ProjectGuid": "c308698b-c8db-4fe0-bd8d-169fab359a35",
+      "DisplayName": "PhotoSharingApplication.BlazorServer",
+      "ColorIndex": 5
+    }
+  },
+  "NextColorIndex": 6
+}

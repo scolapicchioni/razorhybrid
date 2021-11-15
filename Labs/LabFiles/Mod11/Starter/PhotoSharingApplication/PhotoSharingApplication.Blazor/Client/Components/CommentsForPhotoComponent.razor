@@ -1,0 +1,72 @@
+﻿@using PhotoSharingApplication.Core.Entities
+@using PhotoSharingApplication.Core.Interfaces.Client
+@inject ICommentsService service
+
+<h3>Add Comment</h3>
+
+<EditForm Model="@comment" OnValidSubmit="@HandleValidSubmit">
+    <FluentValidationValidator />
+    <ValidationSummary  class="text-danger"/>
+
+    <div class="mb-3">
+        <label class="form-label">
+            Title:
+            <InputText @bind-Value="comment.Title" class="form-control"/>
+        </label>
+    </div>
+    <div class="mb-3">
+        <label class="form-label">
+            Body:
+            <InputTextArea @bind-Value="comment.Body" class="form-control"/>
+        </label>
+    </div>
+    <div class="mb-3">
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+</EditForm>
+
+<h3>Comments For Photo @PhotoId</h3>
+
+@if (comments is null)
+{
+    <p><em>No Comment</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Body</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var comment in comments)
+            {
+                <tr>
+                    <td>@comment.Title</td>
+                    <td>@comment.Body</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+@code {
+    [Parameter]
+    public int PhotoId { get; set; }
+
+    private List<Comment>? comments;
+
+    private Comment comment;
+
+    protected override async Task OnInitializedAsync(){
+        comment = new() { PhotoId = PhotoId };
+        comments = (await service.GetCommentsForPhotoAsync(PhotoId)).ToList();
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        comments.Add(await service.AddCommentAsync(comment));
+    }
+}

@@ -1,0 +1,9 @@
+﻿@page "{id:int}"
+@model PhotoSharingApplication.Web.Pages.Photos.DeleteModel
+@{
+	ViewData["ShowDetailsButton"] = false;
+	ViewData["ShowDeleteButton"] = false;
+	ViewData["ShowConfirmDeleteButton"] = true;
+}
+
+<partial name="_PhotoDetailsPartial" for="Photo" view-data="ViewData"></partial>

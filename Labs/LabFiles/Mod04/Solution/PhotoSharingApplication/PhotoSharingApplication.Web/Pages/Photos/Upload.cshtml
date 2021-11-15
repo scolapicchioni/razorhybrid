@@ -1,0 +1,9 @@
+﻿@page
+@model PhotoSharingApplication.Web.Pages.Photos.UploadModel
+@{
+}
+<form method="post">
+	<input asp-for="Photo.Title" />
+	<textarea asp-for="Photo.Description"></textarea>
+	<input type="submit" />
+</form>

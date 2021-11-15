@@ -1,0 +1,10 @@
+﻿@page "{id:int}"
+@model PhotoSharingApplication.Web.Pages.Photos.DetailsModel
+@{
+	ViewData["ShowDetailsButton"] = false;
+}
+<div class="row row-cols-1">
+	<div class="col">
+	<partial name="_PhotoDetailsPartial" for="Photo" view-data="ViewData"></partial>
+	</div>
+</div>

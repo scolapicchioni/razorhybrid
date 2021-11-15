@@ -1,0 +1,22 @@
+﻿@page
+@model PhotoSharingApplication.Web.Pages.Photos.UploadModel
+@{
+}
+<form method="post" enctype="multipart/form-data">
+	<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+	<div>
+		<input asp-for="Photo.Title" />
+		<span asp-validation-for="Photo.Title" class="text-danger"></span>
+	</div>
+	<div>
+		<textarea asp-for="Photo.Description"></textarea>
+		<span asp-validation-for="Photo.Description" class="text-danger"></span>
+	</div>
+	<div>
+		<input asp-for="FormFile" type="file">
+		<span asp-validation-for="FormFile" class="text-danger"></span>
+	</div>
+	<div>
+		<input type="submit" />
+	</div>
+</form>

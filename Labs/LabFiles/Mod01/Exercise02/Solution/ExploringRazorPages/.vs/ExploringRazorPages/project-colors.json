@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6a258a4e-cc0b-4835-b64d-daaba71d0504": {
+      "ProjectGuid": "6a258a4e-cc0b-4835-b64d-daaba71d0504",
+      "DisplayName": "ExploringRazorPages.WebApplication",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

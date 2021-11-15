@@ -1,0 +1,15 @@
+﻿@page
+@using PhotoSharingApplication.Core.Entities
+@model PhotoSharingApplication.Web.Pages.Photos.IndexModel
+@{
+}
+
+@foreach (Photo item in Model.Photos)
+{
+	<div>
+		<h3>@item.Title</h3>
+		<p>@item.Id</p>
+		<p>@item.Description</p>
+		<a asp-page="./Details" asp-route-id="@item.Id">Details</a>
+	</div>
+}

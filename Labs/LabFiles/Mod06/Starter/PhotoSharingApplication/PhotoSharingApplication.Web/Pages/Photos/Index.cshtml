@@ -1,0 +1,11 @@
+﻿@page
+@using PhotoSharingApplication.Core.Entities
+@model PhotoSharingApplication.Web.Pages.Photos.IndexModel
+@{
+	ViewData["ShowDetailsButton"] = true;
+}
+
+@foreach (Photo item in Model.Photos)
+{
+	<partial name="_PhotoDetailsPartial" model="item" view-data="ViewData"></partial>
+}

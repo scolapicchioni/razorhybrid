@@ -1,0 +1,9 @@
+﻿.card-tilted {
+    transition: all 100ms linear;
+}
+
+    .card-tilted:hover {
+        transform: rotate(3deg) scale(1.1);
+        box-shadow: 1rem 1rem 1rem rgba(128, 128, 128,0.5);
+        z-index:99;
+    }
