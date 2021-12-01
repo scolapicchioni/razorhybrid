@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using PhotoSharingApplication.Core.Entities;
+using PhotoSharingApplication.Shared.Entities;
 using PhotoSharingApplication.Core.Interfaces;
 using PhotoSharingApplication.Infrastructure.Data;
 using PhotoSharingApplication.Web;
@@ -14,6 +14,13 @@ builder.Services.AddPhotoSharingServices();
 
 builder.Services.AddDbContext<PhotoSharingDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
 
+//OpenApi Support
+builder.Services.AddControllers();
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -21,6 +28,10 @@ if (!app.Environment.IsDevelopment()) {
     app.UseExceptionHandler("/Error");
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
+} else {
+    //OpenAPI support
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();

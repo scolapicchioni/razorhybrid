@@ -10,6 +10,32 @@
         "runtime": {
           "lib/net5.0/FluentValidation.dll": {}
         }
+      },
+      "PhotoSharingApplication.Blazor.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "PhotoSharingApplication.Shared": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/PhotoSharingApplication.Blazor.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhotoSharingApplication.Blazor.Core.dll": {}
+        }
+      },
+      "PhotoSharingApplication.Shared/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FluentValidation": "10.3.4"
+        },
+        "compile": {
+          "bin/placeholder/PhotoSharingApplication.Shared.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PhotoSharingApplication.Shared.dll": {}
+        }
       }
     }
   },
@@ -31,11 +57,22 @@
         "lib/netstandard2.1/FluentValidation.dll",
         "lib/netstandard2.1/FluentValidation.xml"
       ]
+    },
+    "PhotoSharingApplication.Blazor.Core/1.0.0": {
+      "type": "project",
+      "path": "../PhotoSharingApplication.Blazor.Core/PhotoSharingApplication.Blazor.Core.csproj",
+      "msbuildProject": "../PhotoSharingApplication.Blazor.Core/PhotoSharingApplication.Blazor.Core.csproj"
+    },
+    "PhotoSharingApplication.Shared/1.0.0": {
+      "type": "project",
+      "path": "../PhotoSharingApplication.Shared/PhotoSharingApplication.Shared.csproj",
+      "msbuildProject": "../PhotoSharingApplication.Shared/PhotoSharingApplication.Shared.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "FluentValidation >= 10.3.4"
+      "PhotoSharingApplication.Blazor.Core >= 1.0.0",
+      "PhotoSharingApplication.Shared >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -72,7 +109,14 @@
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod10\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Core\\PhotoSharingApplication.Blazor.Core.csproj": {
+              "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod10\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Core\\PhotoSharingApplication.Blazor.Core.csproj"
+            },
+            "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod10\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj": {
+              "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod10\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -84,12 +128,6 @@
     "frameworks": {
       "net6.0": {
         "targetAlias": "net6.0",
-        "dependencies": {
-          "FluentValidation": {
-            "target": "Package",
-            "version": "[10.3.4, )"
-          }
-        },
         "imports": [
           "net461",
           "net462",

@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod10\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor\\Shared\\PhotoSharingApplication.Blazor.Shared.csproj",
+      "projectUniqueName": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod09\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor\\Shared\\PhotoSharingApplication.Blazor.Shared.csproj",
       "projectName": "PhotoSharingApplication.Blazor.Shared",
-      "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod10\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor\\Shared\\PhotoSharingApplication.Blazor.Shared.csproj",
+      "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod09\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor\\Shared\\PhotoSharingApplication.Blazor.Shared.csproj",
       "packagesPath": "C:\\Users\\SimonaC\\.nuget\\packages\\",
-      "outputPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod10\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor\\Shared\\obj\\",
+      "outputPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod09\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor\\Shared\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

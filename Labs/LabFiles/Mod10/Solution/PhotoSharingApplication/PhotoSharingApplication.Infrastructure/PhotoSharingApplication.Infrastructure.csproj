@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\PhotoSharingApplication.Blazor.Core\PhotoSharingApplication.Blazor.Core.csproj" />
     <ProjectReference Include="..\PhotoSharingApplication.Core\PhotoSharingApplication.Core.csproj" />
+    <ProjectReference Include="..\PhotoSharingApplication.Shared\PhotoSharingApplication.Shared.csproj" />
   </ItemGroup>
 
 </Project>

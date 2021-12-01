@@ -1,4 +1,4 @@
-﻿using PhotoSharingApplication.Core.Entities;
+﻿using PhotoSharingApplication.Shared.Entities;
 using PhotoSharingApplication.Core.Interfaces;
 
 namespace PhotoSharingApplication.Infrastructure.Repositories;
@@ -17,19 +17,14 @@ public class PhotosRepositoryList : IPhotosRepository {
         return Task.CompletedTask;
     }
 
+    public Task<IEnumerable<Photo>> GetAllPhotosAsync() => Task.FromResult((IEnumerable<Photo>)photos);
+
+    public Task<Photo?> GetPhotoByIdAsync(int id) => Task.FromResult(photos.FirstOrDefault(p => p.Id == id));
     public Task<Photo?> DeletePhotoAsync(int id) {
-        Photo? photo = photos.FirstOrDefault(p=>p.Id==id);
+        Photo? photo = photos.FirstOrDefault(p => p.Id == id);
         if (photo is not null) {
             photos.Remove(photo);
         }
         return Task.FromResult(photo);
-    }
-
-    public Task<IEnumerable<Photo>> GetAllPhotosAsync() {
-        return Task.FromResult((IEnumerable<Photo>)photos);
-    }
-
-    public Task<Photo?> GetPhotoByIdAsync(int id) {
-        return Task.FromResult(photos.FirstOrDefault(p => p.Id == id));
     }
 }

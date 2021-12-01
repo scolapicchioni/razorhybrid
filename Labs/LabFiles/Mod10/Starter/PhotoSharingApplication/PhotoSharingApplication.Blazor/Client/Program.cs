@@ -1,11 +1,13 @@
-using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using PhotoSharingApplication.Core.Validators;
+using PhotoSharingApplication.Blazor.Core.Interfaces;
+using PhotoSharingApplication.Blazor.Infrastructure.Repositories;
+using PhotoSharingApplication.Blazor.Core.Services;
+using PhotoSharingApplication.Shared.Validators;
 
 var builder = WebAssemblyHostBuilder.CreateDefault(args);
 
-builder.Services.AddSingleton<PhotoSharingApplication.Core.Interfaces.Client.ICommentsRepository, PhotoSharingApplication.Infrastructure.Repositories.Client.CommentsRepositoryList>();
-builder.Services.AddScoped<PhotoSharingApplication.Core.Interfaces.Client.ICommentsService, PhotoSharingApplication.Core.Services.Client.CommentsService>();
+builder.Services.AddSingleton<ICommentsRepository, CommentsRepositoryList>();
+builder.Services.AddScoped<ICommentsService, CommentsService>();
 builder.Services.AddSingleton<CommentValidator>();
 builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
 

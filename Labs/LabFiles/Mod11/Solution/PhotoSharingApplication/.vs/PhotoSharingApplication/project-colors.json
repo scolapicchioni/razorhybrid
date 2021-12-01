@@ -36,11 +36,26 @@
       "DisplayName": "PhotoSharingApplication.BlazorServer",
       "ColorIndex": 5
     },
-    "8c66cc56-9859-4279-ac66-992b894a999b": {
-      "ProjectGuid": "8c66cc56-9859-4279-ac66-992b894a999b",
-      "DisplayName": "PhotoSharingApplication.Web.UnitTests",
+    "89c662ff-a528-4905-9f5d-c484c5c6c7ee": {
+      "ProjectGuid": "89c662ff-a528-4905-9f5d-c484c5c6c7ee",
+      "DisplayName": "PhotoSharingApplication.Blazor.Core",
       "ColorIndex": 6
+    },
+    "54a4f65b-549e-4d19-9dc7-9647eadde018": {
+      "ProjectGuid": "54a4f65b-549e-4d19-9dc7-9647eadde018",
+      "DisplayName": "PhotoSharingApplication.Blazor.Infrastructure",
+      "ColorIndex": 7
+    },
+    "e1eb5361-ba2f-4343-9a31-e508375c25f5": {
+      "ProjectGuid": "e1eb5361-ba2f-4343-9a31-e508375c25f5",
+      "DisplayName": "PhotoSharingApplication.Shared",
+      "ColorIndex": 8
+    },
+    "72b6c8e8-0d2b-45eb-bf3d-6b0175ee9a97": {
+      "ProjectGuid": "72b6c8e8-0d2b-45eb-bf3d-6b0175ee9a97",
+      "DisplayName": "PhotoSharingApplication.Web.UnitTests",
+      "ColorIndex": 9
     }
   },
-  "NextColorIndex": 7
+  "NextColorIndex": 10
 }

@@ -1,7 +1,7 @@
 ﻿using FluentValidation;
-using PhotoSharingApplication.Core.Entities;
+using PhotoSharingApplication.Shared.Entities;
 using PhotoSharingApplication.Core.Interfaces;
-using PhotoSharingApplication.Core.Validators;
+using PhotoSharingApplication.Shared.Validators;
 
 namespace PhotoSharingApplication.Core.Services;
 

@@ -22,7 +22,7 @@ namespace PhotoSharingApplication.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("PhotoSharingApplication.Core.Entities.Photo", b =>
+            modelBuilder.Entity("PhotoSharingApplication.Shared.Entities.Photo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()

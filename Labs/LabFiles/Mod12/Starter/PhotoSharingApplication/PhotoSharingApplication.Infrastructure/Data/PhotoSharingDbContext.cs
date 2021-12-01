@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PhotoSharingApplication.Core.Entities;
+using PhotoSharingApplication.Shared.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,7 +28,6 @@ namespace PhotoSharingApplication.Infrastructure.Data {
             modelBuilder.Entity<Comment>()
                 .Property(b => b.Body)
                 .HasMaxLength(250);
-            
         }
         public DbSet<Photo> Photos { get; set; }
         public DbSet<Comment> Comments { get; set; }

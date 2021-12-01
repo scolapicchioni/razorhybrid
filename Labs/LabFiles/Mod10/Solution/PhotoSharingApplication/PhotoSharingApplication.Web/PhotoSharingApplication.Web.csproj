@@ -18,9 +18,11 @@
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
+	<ProjectReference Include="..\PhotoSharingApplication.Blazor.Core\PhotoSharingApplication.Blazor.Core.csproj" />
 	<ProjectReference Include="..\PhotoSharingApplication.Blazor\Client\PhotoSharingApplication.Blazor.Client.csproj" />
     <ProjectReference Include="..\PhotoSharingApplication.Core\PhotoSharingApplication.Core.csproj" />
     <ProjectReference Include="..\PhotoSharingApplication.Infrastructure\PhotoSharingApplication.Infrastructure.csproj" />

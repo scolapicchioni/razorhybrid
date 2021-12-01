@@ -1,0 +1,9 @@
+{
+  "PhotoSharingApplication.Blazor.Client, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor\\Client",
+  "PhotoSharingApplication.Blazor.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Core",
+  "PhotoSharingApplication.Blazor.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Infrastructure",
+  "PhotoSharingApplication.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core",
+  "PhotoSharingApplication.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Infrastructure",
+  "PhotoSharingApplication.Shared, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared",
+  "PhotoSharingApplication.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Web"
+}

@@ -1,0 +1,8 @@
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Server\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Server.csproj.AssemblyReference.cache
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Server\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Server\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Server.AssemblyInfoInputs.cache
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Server\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Server.AssemblyInfo.cs
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Server\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Server.csproj.CoreCompileInputs.cache
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Server\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Server\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Server.RazorAssemblyInfo.cache
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Server\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Server.RazorAssemblyInfo.cs

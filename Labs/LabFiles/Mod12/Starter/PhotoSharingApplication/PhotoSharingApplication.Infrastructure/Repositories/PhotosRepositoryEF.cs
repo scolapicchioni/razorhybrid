@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PhotoSharingApplication.Core.Entities;
+using PhotoSharingApplication.Shared.Entities;
 using PhotoSharingApplication.Core.Interfaces;
 using PhotoSharingApplication.Infrastructure.Data;
 

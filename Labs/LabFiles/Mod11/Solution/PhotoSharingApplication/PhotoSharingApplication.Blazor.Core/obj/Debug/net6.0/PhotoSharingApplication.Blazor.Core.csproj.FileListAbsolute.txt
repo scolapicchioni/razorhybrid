@@ -1,0 +1,15 @@
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\bin\Debug\net6.0\PhotoSharingApplication.Blazor.Core.deps.json
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\bin\Debug\net6.0\PhotoSharingApplication.Blazor.Core.dll
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\bin\Debug\net6.0\ref\PhotoSharingApplication.Blazor.Core.dll
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\bin\Debug\net6.0\PhotoSharingApplication.Blazor.Core.pdb
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\bin\Debug\net6.0\PhotoSharingApplication.Shared.dll
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\bin\Debug\net6.0\PhotoSharingApplication.Shared.pdb
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Core.csproj.AssemblyReference.cache
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Core.AssemblyInfoInputs.cache
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Core.AssemblyInfo.cs
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Core.csproj.CoreCompileInputs.cache
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Core.csproj.CopyComplete
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Core.dll
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\obj\Debug\net6.0\ref\PhotoSharingApplication.Blazor.Core.dll
+C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor.Core\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Core.pdb

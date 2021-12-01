@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PhotoSharingApplication.Core.Entities;
+using PhotoSharingApplication.Shared.Entities;
 using PhotoSharingApplication.Core.Interfaces;
 
 namespace PhotoSharingApplication.Web.Pages.Photos;

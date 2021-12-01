@@ -1,5 +1,5 @@
-﻿using PhotoSharingApplication.Core.Entities;
-using PhotoSharingApplication.Core.Interfaces.Client;
+﻿using PhotoSharingApplication.Blazor.Core.Interfaces;
+using PhotoSharingApplication.Shared.Entities;
 
 namespace PhotoSharingApplication.Infrastructure.Repositories.Client;
 

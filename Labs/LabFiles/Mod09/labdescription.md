@@ -69,22 +69,49 @@ In the `Pages/Photos/Details.cshtml` file, add the following:
 Run the application, navigate to the details of a photo and verify that the counter is rendered and that it is interactive.
 
 We successfully integrated the Blazor Client into the Photo/Details Razor Page. Now it's time to build the actual Blazor Component.  
-We want the component to be agnostic of technologies, so we'll follow the same pattern of service and repository as we did for the server.
+We want the component to be agnostic of technologies and implementation, so we'll follow the same pattern of service and repository as we did for the server.  
+Because the entities and validators will be shared between client side and server side, we will move them to a new project.  
+Since the component will be prerendered, we will have to implement services and repositories both on the client and on the server. On the client, our repository will talk to the webapi using an httpclient, while on the server the repository willl talk to the Api Controller by invoking it directly (no need for an Http call, since we're already in process on the server). For now, since we don't have a webapi yet, we'lll just use a fake `List<Comment>` to simulate the repository. 
+
+### PhotoSharingApplication.Shared
+Let's start by creating a shared project where we can move models and validators
+- Add a new project of type Class Library. Name it `PhotoSharingApplication.Shared`.  
+- Move the `Entities` folder from the PhotoSharingApplication.Core project to the PhotoSharingApplication.Shared project.  
+- Move the `Validators` folder from the PhotoSharingApplication.Core project to the PhotoSharingApplication.Shared project.  
+- In the `Entities` folder, add a new file called `Comment.cs` with the Comment class containing properties for Id, Title and Body.
+- In the `Validators` folder, add a new file called `CommentValidator.cs` with the `CommentValidator` class. Add rules to ensure that the Title and Body are not empty and that they are not longer than 100 and 250 characters respectively.
+
+### PhotoSharingApplication.Blazor.Core
+Now let's focus on the core of our client side, with interfaces and the service.  
+
+- Add a new project of type Class Library. Name it `PhotoSharingApplication.Blazor.Core`.
+- Add a new folder. Name it `Interfaces`.
+- In the `Interfaces` folder, add a new file called `ICommentService.cs` with the `ICommentService` interface. Add methods to get comments for a specific photo given the photoId, add a comment and get one comment goven its id.
+- In the `Interfaces` folder, add a new file called `ICommentRepository.cs` with the `ICommentRepository` interface. Add the same methods as the service.
+- Add a new folder. Name it `Services`.
+- In the `Services` folder, add a new file called `CommentService.cs` with the `CommentService` class. The `CommentsService` class has a dependency on the `ICommentRepository` interface. Implement the methods defined in the interface.
+
+### PhotoSharingApplication.Blazor.Infrastructure
+For the client infrastructure, we'll add a Repository that uses a fake list. We will reploace it with a real repository later, where we will invoke our Api through an HttpClient.
+
+- Add a new project of type Class Library. Name it `PhotoSharingApplication.Blazor.Infrastructure`.
+- Add a new folder. Name it `Repositories`. 
+- In the `Repositories` folder, add a new file called `CommentRepositoryList.cs` with the `CommentRepositoryList` class. Implement the methods defined in the `ICommentsRepository` interface by using a privae static `List<Comment>`.
+
+### PhotoSharingApplication.Blazor.Client
+
+- Register The service, the repository and the validator
 
 ### PhotoSharingApplication.Core
+As already stated, our component will be prerendered, so we will need to specify which service and repository to use server side to prerender the html to send to the client on first call. This is why we need a new implementation of the repository and service.
 
-- In the `Entities` folder, add a new file called `Comment.cs` with the Comment class containing properties for Id, Title and Body.
-- In the `Interfaces` folder, add a `Client` folder.
-- In the `Interfaces/Client` folder, add a new file called `ICommentsService.cs` with the `ICommentsService` interface. Make sure that the `AddCommentAsync` returns a `Task<Comment>`.
-- In the `Interfaces/Client` folder, add a new file called `ICommentsRepository.cs` with the `ICommentsRepository` interface. Make sure that the `AddComment` returns a `Task<Comment>`.
-- In the `Validators` folder, add a new file called `CommentValidator.cs` with the `CommentValidator` class. Add rules to ensure that the Title and Body are not empty and that they are not longer than 100 and 250 charachters respectively.
 - In the `Service` folder, add a new `Client` folder
-- In the `Services/Client` folder, add a new file called `CommentsService.cs` with the `CommentsService` class. Implement the `ICommentsService` interface by using the validator and the repository. Make sure that the `AddCommentAsync` returns the newly created comment.
+- In the `Services/Client` folder, add a new file called `CommentsService.cs` with the `CommentsService` class. Implement the `ICommentsService` interface of the `PhotoSharingApplication.Blazor.Core.Interfaces` namespace by using the validator and the repository.
 
 ### PhotoSharingApplication.Infrastructure
 
 - In the `Repository` folder, add a new `Client` folder.
-- In the `Repository/Client` folder, add a new file called `CommentsRepositoryList.cs` with the `CommentsRepositoryList` class. Implement the `ICommentsRepository` interface by using a List<Comment>`. Add a couple of comments for the first couple of photos, so that we can test the CommentsForPhotoComponent later. Make sure that the `AddCommentAsync` returns the newly created comment.
+- In the `Repository/Client` folder, add a new file called `CommentsRepositoryList.cs` with the `CommentsRepositoryList` class. Implement the `ICommentsRepository` of the interface of the `PhotoSharingApplication.Blazor.Core.Interfaces` namespace by using a `List<Comment>`. Add a couple of comments for the first couple of photos, so that we can test the CommentsForPhotoComponent later. Make sure that the `AddCommentAsync` returns the newly created comment.
 
 ### PhotosSharingApplication.Web
 
@@ -121,20 +148,12 @@ In the`Pages/Photos/Details.cshtml` file, add the following:
 If you run the application and navigate to the details of a photo, you should be able to see the comments for that photo. 
 
 ### PhotoSharing.Blazor.Client
-Now it's time to add a comment. Let's go back to our `CommentsForPhotoComponent`.  
+Now it's time to implement the feature to add a comment. Let's go back to our `CommentsForPhotoComponent`.  
 We need a new variable of type `Comment` to hold the new comment. We will initialize it during the `OnInitializedAsync` with a new `Comment` object with a PhotoId equal to the component parameter with the same name.  
 In the html section, we'll add an `EditForm`, setting the `Model` to the comment variable. We'll have an `InputText` with a `bind-Value` set to `comment.Title` and a `InputTextArea` with a `bind-Value` set to `comment.Body`.  
 In order to use `FluentValidation`, let's add the `Blazored.FluentValidation` package and the `@using Blazored.FluentValidation` in the `_Imports.razor` file.    
 In the `EditForm`, instead of using the `<DataAnnotationValidator />`, let's use a `<FluentValidationValidator />`, together with a `<ValidationSummary />`.  
-Let's handle the `OnValidubmit` of the `EditForm` by calling a `HandleValidSubmit` method, where we await the service.AddCommentAsync(comment) and then add the result to the comments list.    
-Since the service, the repository and the validators will be used client side, we need to register them on the Blazor Client project as well.
-In the `program.cs` file, add the following:
-
-```cs
-builder.Services.AddSingleton<PhotoSharingApplication.Core.Interfaces.Client.ICommentsRepository, PhotoSharingApplication.Infrastructure.Repositories.Client.CommentsRepositoryList>();
-builder.Services.AddScoped<PhotoSharingApplication.Core.Interfaces.Client.ICommentsService, PhotoSharingApplication.Core.Services.Client.CommentsService>();
-builder.Services.AddSingleton<CommentValidator>();
-```
+Let's handle the `OnValiSubmit` of the `EditForm` by calling a `HandleValidSubmit` method, where we `await` the `service.AddCommentAsync(comment)` and then add the result to the comments list.    
 
 If you run the application now, you should be able to add a new comment for an existing photo.
 

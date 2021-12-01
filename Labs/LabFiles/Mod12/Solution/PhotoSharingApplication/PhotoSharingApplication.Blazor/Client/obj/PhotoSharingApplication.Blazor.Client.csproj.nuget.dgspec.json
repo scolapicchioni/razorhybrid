@@ -4,6 +4,137 @@
     "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor\\Client\\PhotoSharingApplication.Blazor.Client.csproj": {}
   },
   "projects": {
+    "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Core\\PhotoSharingApplication.Blazor.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Core\\PhotoSharingApplication.Blazor.Core.csproj",
+        "projectName": "PhotoSharingApplication.Blazor.Core",
+        "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Core\\PhotoSharingApplication.Blazor.Core.csproj",
+        "packagesPath": "C:\\Users\\SimonaC\\.nuget\\packages\\",
+        "outputPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Core\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\SimonaC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj": {
+                "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Infrastructure\\PhotoSharingApplication.Blazor.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Infrastructure\\PhotoSharingApplication.Blazor.Infrastructure.csproj",
+        "projectName": "PhotoSharingApplication.Blazor.Infrastructure",
+        "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Infrastructure\\PhotoSharingApplication.Blazor.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\SimonaC\\.nuget\\packages\\",
+        "outputPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\SimonaC\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Core\\PhotoSharingApplication.Blazor.Core.csproj": {
+                "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Core\\PhotoSharingApplication.Blazor.Core.csproj"
+              },
+              "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj": {
+                "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor\\Client\\PhotoSharingApplication.Blazor.Client.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -34,11 +165,14 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core\\PhotoSharingApplication.Core.csproj": {
-                "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core\\PhotoSharingApplication.Core.csproj"
+              "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Core\\PhotoSharingApplication.Blazor.Core.csproj": {
+                "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Core\\PhotoSharingApplication.Blazor.Core.csproj"
               },
-              "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Infrastructure\\PhotoSharingApplication.Infrastructure.csproj": {
-                "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Infrastructure\\PhotoSharingApplication.Infrastructure.csproj"
+              "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Infrastructure\\PhotoSharingApplication.Blazor.Infrastructure.csproj": {
+                "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Blazor.Infrastructure\\PhotoSharingApplication.Blazor.Infrastructure.csproj"
+              },
+              "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj": {
+                "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj"
               }
             }
           }
@@ -61,16 +195,8 @@
               "target": "Package",
               "version": "[6.0.0, )"
             },
-            "Microsoft.AspNetCore.Components.WebAssembly.Authentication": {
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
             "Microsoft.AspNetCore.Components.WebAssembly.DevServer": {
               "suppressParent": "All",
-              "target": "Package",
-              "version": "[6.0.0, )"
-            },
-            "Microsoft.Extensions.Http": {
               "target": "Package",
               "version": "[6.0.0, )"
             }
@@ -105,14 +231,14 @@
         }
       }
     },
-    "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core\\PhotoSharingApplication.Core.csproj": {
+    "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core\\PhotoSharingApplication.Core.csproj",
-        "projectName": "PhotoSharingApplication.Core",
-        "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core\\PhotoSharingApplication.Core.csproj",
+        "projectUniqueName": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj",
+        "projectName": "PhotoSharingApplication.Shared",
+        "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj",
         "packagesPath": "C:\\Users\\SimonaC\\.nuget\\packages\\",
-        "outputPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core\\obj\\",
+        "outputPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -149,77 +275,7 @@
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
-              "version": "[10.3.4, )"
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Infrastructure\\PhotoSharingApplication.Infrastructure.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Infrastructure\\PhotoSharingApplication.Infrastructure.csproj",
-        "projectName": "PhotoSharingApplication.Infrastructure",
-        "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Infrastructure\\PhotoSharingApplication.Infrastructure.csproj",
-        "packagesPath": "C:\\Users\\SimonaC\\.nuget\\packages\\",
-        "outputPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Infrastructure\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\SimonaC\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net6.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net6.0": {
-            "targetAlias": "net6.0",
-            "projectReferences": {
-              "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core\\PhotoSharingApplication.Core.csproj": {
-                "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod12\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core\\PhotoSharingApplication.Core.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
-          "dependencies": {
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[6.0.0, )"
+              "version": "[10.3.5, )"
             }
           },
           "imports": [
