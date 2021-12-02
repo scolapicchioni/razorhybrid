@@ -1,0 +1,25 @@
+﻿@page "{id:int}"
+@using PhotoSharingApplication.Blazor.Client.Components
+@model PhotoSharingApplication.Web.Pages.Photos.DetailsModel
+@{
+	ViewData["ShowDetailsButton"] = false;
+	ViewData["ShowDeleteButton"] = true;
+	ViewData["ShowConfirmDeleteButton"] = false;
+}
+<div class="row row-cols-1">
+	<div class="col">
+	<partial name="_PhotoDetailsPartial" for="Photo" view-data="ViewData"></partial>
+	</div>
+</div>
+
+<form method="POST">
+    <input type="submit" asp-page-handler="AddToFavorites" value="👍 Add To Favorites ♥" class="btn btn-secondary" />
+</form>
+
+<component type="typeof(CommentsForPhotoComponent)" render-mode="WebAssemblyPrerendered" param-PhotoId="@Model.Photo.Id"/>
+
+<component type="typeof(ChatComponent)" render-mode="WebAssemblyPrerendered" param-PhotoId="@Model.Photo.Id"/>
+
+@section Scripts {
+	<script src="_framework/blazor.webassembly.js"></script>
+}
