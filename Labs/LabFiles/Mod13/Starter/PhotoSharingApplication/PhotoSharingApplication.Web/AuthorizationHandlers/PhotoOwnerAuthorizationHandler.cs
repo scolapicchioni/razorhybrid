@@ -1,5 +1,5 @@
 ﻿using Microsoft.AspNetCore.Authorization;
-using PhotoSharingApplication.Core.Entities;
+using PhotoSharingApplication.Shared.Entities;
 
 namespace PhotoSharingApplication.Web.AuthorizationHandlers {
     public class PhotoOwnerAuthorizationHandler : AuthorizationHandler<PhotoOwnerRequirement, Photo> {

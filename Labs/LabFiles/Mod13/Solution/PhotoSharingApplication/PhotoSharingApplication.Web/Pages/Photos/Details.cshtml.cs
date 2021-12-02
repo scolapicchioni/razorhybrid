@@ -1,8 +1,7 @@
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PhotoSharingApplication.Core.Entities;
 using PhotoSharingApplication.Core.Interfaces;
+using PhotoSharingApplication.Shared.Entities;
 using PhotoSharingApplication.Web.Sessions;
 
 namespace PhotoSharingApplication.Web.Pages.Photos;
@@ -22,14 +21,11 @@ public class DetailsModel : PageModel {
         return Page();
     }
 
-    //Session
     public async Task<IActionResult> OnPostAddToFavorites(int id) {
-        SortedSet<int> favorites = HttpContext.Session.Get<SortedSet<int>>("favoritePhotos");
-        if (favorites == default) {
-            favorites = new();
-        }
+        string key = "favoritePhotos";
+        HashSet<int> favorites = HttpContext.Session.Get<HashSet<int>>(key) ?? new();
         favorites.Add(id);
-        HttpContext.Session.Set("favoritePhotos", favorites);
+        HttpContext.Session.Set(key, favorites);
         Photo = await photosService.GetPhotoByIdAsync(id);
         return Page();
     }

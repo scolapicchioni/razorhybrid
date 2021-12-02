@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using PhotoSharingApplication.Core.Entities;
+using PhotoSharingApplication.Shared.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,7 +18,16 @@ namespace PhotoSharingApplication.Infrastructure.Data {
             modelBuilder.Entity<Photo>()
                 .Property(b => b.Description)
                 .HasMaxLength(250);
-            modelBuilder.Entity<Photo>()
+
+            modelBuilder.Entity<Photo>(
+                photoBuilder => {
+                    photoBuilder.ToTable("Photos");
+                    photoBuilder.HasOne(o => o.Image).WithOne().HasForeignKey<Image>(o => o.Id);
+                });
+
+            modelBuilder.Entity<Image>(imageBuilder => imageBuilder.ToTable("Photos"));
+
+            modelBuilder.Entity<Image>()
                 .Property(b => b.ContentType)
                 .HasMaxLength(30);
 
@@ -28,9 +37,9 @@ namespace PhotoSharingApplication.Infrastructure.Data {
             modelBuilder.Entity<Comment>()
                 .Property(b => b.Body)
                 .HasMaxLength(250);
-            
         }
         public DbSet<Photo> Photos { get; set; }
         public DbSet<Comment> Comments { get; set; }
+        public DbSet<Image> Images { get; set; }
     }
 }

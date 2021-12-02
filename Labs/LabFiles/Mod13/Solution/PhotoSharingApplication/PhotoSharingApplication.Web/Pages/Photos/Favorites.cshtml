@@ -1,16 +1,4 @@
 ﻿@page
-@using PhotoSharingApplication.Core.Entities
 @model PhotoSharingApplication.Web.Pages.Photos.FavoritesModel
-@{
-	ViewData["ShowDetailsButton"] = true;
-	ViewData["ShowDeleteButton"] = true;
-	ViewData["ShowConfirmDeleteButton"] = false;
-}
-<div class="row row-cols-1 row-cols-md-2 g-4">
-@foreach (Photo item in Model.Photos)
-{
-	<div class="col">
-	<partial name="_PhotoDetailsPartial" model="item" view-data="ViewData"></partial>
-	</div>
-}
-</div>
+
+<partial name="_PhotosListPartial" model="Model.Photos" view-data="ViewData"></partial>

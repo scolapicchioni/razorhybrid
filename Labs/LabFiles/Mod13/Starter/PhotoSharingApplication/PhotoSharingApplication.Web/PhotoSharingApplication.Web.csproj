@@ -7,9 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <PackageReference Include="Microsoft.AspNetCore.ApiAuthorization.IdentityServer" Version="6.0.0" />
 	  <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="6.0.0" />
-	  <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.4" />
+	  <PackageReference Include="FluentValidation.AspNetCore" Version="10.3.5" />
 	  <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="6.0.0" />
 	  <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="6.0.0" />
 	  <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="6.0.0" />
@@ -23,9 +22,11 @@
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="6.0.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
+	<ProjectReference Include="..\PhotoSharingApplication.Blazor.Core\PhotoSharingApplication.Blazor.Core.csproj" />
 	<ProjectReference Include="..\PhotoSharingApplication.Blazor\Client\PhotoSharingApplication.Blazor.Client.csproj" />
     <ProjectReference Include="..\PhotoSharingApplication.Core\PhotoSharingApplication.Core.csproj" />
     <ProjectReference Include="..\PhotoSharingApplication.Infrastructure\PhotoSharingApplication.Infrastructure.csproj" />

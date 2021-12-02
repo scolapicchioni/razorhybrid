@@ -1,14 +1,13 @@
-using Microsoft.AspNetCore.Authentication.Cookies;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using PhotoSharingApplication.Core.Entities;
+using PhotoSharingApplication.Shared.Entities;
 using PhotoSharingApplication.Core.Interfaces;
 using System.ComponentModel.DataAnnotations;
+using Microsoft.AspNetCore.Authorization;
 
 namespace PhotoSharingApplication.Web.Pages.Photos;
 
-[Authorize(AuthenticationSchemes = "Identity.Application")]
+[Authorize]
 public class UploadModel : PageModel {
     private readonly IPhotosService photosService;
 
@@ -33,10 +32,8 @@ public class UploadModel : PageModel {
         }
         using (var memoryStream = new MemoryStream()) {
             await FormFile.CopyToAsync(memoryStream);
-            Photo.PhotoFile = memoryStream.ToArray();
-            Photo.ContentType = FormFile.ContentType;
+            Photo.Image = new() { ContentType = FormFile.ContentType, PhotoFile = memoryStream.ToArray() };
         }
-
         Photo.SubmittedBy = User?.Identity?.Name;
         try {
             await photosService.AddPhotoAsync(Photo);

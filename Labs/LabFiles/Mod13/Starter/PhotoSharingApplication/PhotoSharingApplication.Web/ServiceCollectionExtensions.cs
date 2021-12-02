@@ -1,11 +1,9 @@
 ﻿using PhotoSharingApplication.Core.Interfaces;
 using PhotoSharingApplication.Core.Services;
 using PhotoSharingApplication.Infrastructure.Repositories;
-using PhotoSharingApplication.Core.Validators;
 using FluentValidation.AspNetCore;
-using PhotoSharingApplication.Core.Interfaces.Client;
-using PhotoSharingApplication.Core.Services.Client;
-using PhotoSharingApplication.Infrastructure.Repositories.Client;
+using PhotoSharingApplication.Shared.Validators;
+using PhotoSharingApplication.Web.Controllers;
 
 namespace PhotoSharingApplication.Web;
 
@@ -17,10 +15,13 @@ public static class ServiceCollectionExtensions {
         services.AddScoped<IPhotosRepository, PhotosRepositoryEF>();
         services.AddScoped<IPhotosService, PhotosService>();
 
-        services.AddSingleton<Core.Interfaces.Client.ICommentsRepository, Infrastructure.Repositories.Client.CommentsRepositoryList>();
-        services.AddScoped<Core.Interfaces.Client.ICommentsService, Core.Services.Client.CommentsService>();
+        //Blazor Client, but server side (for prerendering)
+        services.AddScoped<CommentsController>();
+        services.AddScoped<PhotoSharingApplication.Blazor.Core.Interfaces.ICommentsRepository, PhotoSharingApplication.Web.Controllers.CommentsRepositoryApi>();
+        services.AddScoped<PhotoSharingApplication.Blazor.Core.Interfaces.ICommentsService, PhotoSharingApplication.Core.Services.Client.CommentsService>();
 
-        services.AddSingleton<Core.Interfaces.ICommentsRepository, Infrastructure.Repositories.CommentsRepositoryList>();
+        //Web Api
+        services.AddScoped<Core.Interfaces.ICommentsRepository, Infrastructure.Repositories.CommentsRepositoryEF>();
         services.AddScoped<Core.Interfaces.ICommentsService, Core.Services.CommentsService>();
 
         return services;

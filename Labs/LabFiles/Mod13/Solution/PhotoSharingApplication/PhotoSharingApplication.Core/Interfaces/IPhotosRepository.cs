@@ -1,11 +1,12 @@
-﻿using PhotoSharingApplication.Core.Entities;
+﻿using PhotoSharingApplication.Shared.Entities;
 
 namespace PhotoSharingApplication.Core.Interfaces;
 
 public interface IPhotosRepository {
     Task<IEnumerable<Photo>> GetAllPhotosAsync();
-    Task<IEnumerable<Photo>> GetSetOfPhotosAsync(IEnumerable<int> ids);
     Task<Photo?> GetPhotoByIdAsync(int id);
+    Task<Image?> GetImageByIdAsync(int id);
     Task AddPhotoAsync(Photo photo);
     Task<Photo?> DeletePhotoAsync(int id);
+    Task<IEnumerable<Photo>> GetSetOfPhotosAsync(IEnumerable<int> ids);
 }

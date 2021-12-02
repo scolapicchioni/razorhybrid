@@ -22,42 +22,7 @@ namespace PhotoSharingApplication.Infrastructure.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("PhotoSharingApplication.Core.Entities.Comment", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Body")
-                        .IsRequired()
-                        .HasMaxLength(250)
-                        .HasColumnType("nvarchar(250)");
-
-                    b.Property<int>("PhotoId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("SubmittedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("SubmittedOn")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PhotoId");
-
-                    b.ToTable("Comments");
-                });
-
-            modelBuilder.Entity("PhotoSharingApplication.Core.Entities.Photo", b =>
+            modelBuilder.Entity("PhotoSharingApplication.Shared.Entities.Photo", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -79,13 +44,6 @@ namespace PhotoSharingApplication.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("varbinary(max)");
 
-                    b.Property<string>("SubmittedBy")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<DateTime>("SubmittedOn")
-                        .HasColumnType("datetime2");
-
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasMaxLength(100)
@@ -94,20 +52,6 @@ namespace PhotoSharingApplication.Infrastructure.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Photos");
-                });
-
-            modelBuilder.Entity("PhotoSharingApplication.Core.Entities.Comment", b =>
-                {
-                    b.HasOne("PhotoSharingApplication.Core.Entities.Photo", null)
-                        .WithMany("Comments")
-                        .HasForeignKey("PhotoId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("PhotoSharingApplication.Core.Entities.Photo", b =>
-                {
-                    b.Navigation("Comments");
                 });
 #pragma warning restore 612, 618
         }

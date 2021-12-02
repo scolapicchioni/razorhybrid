@@ -1,4 +1,4 @@
-﻿using PhotoSharingApplication.Core.Entities;
+﻿using PhotoSharingApplication.Shared.Entities;
 
 namespace PhotoSharingApplication.Core.Interfaces;
 
