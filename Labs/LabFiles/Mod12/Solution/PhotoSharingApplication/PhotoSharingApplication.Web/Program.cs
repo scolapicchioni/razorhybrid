@@ -14,9 +14,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 //Our own extension method, contained in the ServiceCollectionExtensions class
-builder.Services.AddPhotoSharingServices();
-
-builder.Services.AddDbContext<PhotoSharingDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+builder.Services
+    .AddPhotoSharingServices()
+    .AddPhotoSharingDb(builder.Configuration.GetConnectionString("Default"));
+    
 builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
     .AddEntityFrameworkStores<PhotoSharingIdentityContext>();
 builder.Services.AddDbContext<PhotoSharingIdentityContext>(options =>

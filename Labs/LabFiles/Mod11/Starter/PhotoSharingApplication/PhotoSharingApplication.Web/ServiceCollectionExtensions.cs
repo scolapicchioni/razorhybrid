@@ -12,7 +12,6 @@ public static class ServiceCollectionExtensions {
         //services for Validation
         services.AddFluentValidation(fv => fv.RegisterValidatorsFromAssemblyContaining<PhotoValidator>());
         
-        services.AddScoped<IPhotosRepository, PhotosRepositoryEF>();
         services.AddScoped<IPhotosService, PhotosService>();
 
         //Blazor Client, but server side (for prerendering)
