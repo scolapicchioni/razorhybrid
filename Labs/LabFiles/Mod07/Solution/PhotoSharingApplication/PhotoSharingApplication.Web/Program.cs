@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PhotoSharingApplication.Core.Entities;
 using PhotoSharingApplication.Core.Interfaces;
+using PhotoSharingApplication.Infrastructure;
 using PhotoSharingApplication.Infrastructure.Data;
 using PhotoSharingApplication.Web;
 
@@ -10,9 +11,9 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
 
 //Our own extension method, contained in the ServiceCollectionExtensions class
-builder.Services.AddPhotoSharingServices();
-
-builder.Services.AddDbContext<PhotoSharingDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default")));
+builder.Services
+    .AddPhotoSharingServices()
+    .AddPhotoSharingDb(builder.Configuration.GetConnectionString("Default"));
 
 var app = builder.Build();
 
