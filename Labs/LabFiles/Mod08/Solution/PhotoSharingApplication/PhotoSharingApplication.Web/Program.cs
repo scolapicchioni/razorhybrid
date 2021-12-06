@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PhotoSharingApplication.Core.Entities;
 using PhotoSharingApplication.Core.Interfaces;
-using PhotoSharingApplication.Infrastructure.Data;
+using PhotoSharingApplication.Infrastructure;
 using PhotoSharingApplication.Web;
 
 var builder = WebApplication.CreateBuilder(args);
