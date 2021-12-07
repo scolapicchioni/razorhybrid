@@ -21,11 +21,7 @@ public class CommentsRepositoryHttp : ICommentsRepository {
         return await httpResponseMessage.Content.ReadFromJsonAsync<Comment>();
     }
 
-    public async Task<Comment?> GetCommentByIdAsync(int id) {
-        return await httpClient.GetFromJsonAsync<Comment>($"/api/Comments/{id}");
-    }
+    public async Task<Comment?> GetCommentByIdAsync(int id) => await httpClient.GetFromJsonAsync<Comment>($"/api/Comments/{id}");
 
-    public async Task<IEnumerable<Comment>> GetCommentsForPhotoAsync(int photoId) {
-        return await httpClient.GetFromJsonAsync<IEnumerable<Comment>>($"/api/Photos/{photoId}/Comments");
-    }
+    public async Task<IEnumerable<Comment>> GetCommentsForPhotoAsync(int photoId) => await httpClient.GetFromJsonAsync<IEnumerable<Comment>>($"/api/Photos/{photoId}/Comments");
 }
