@@ -46,11 +46,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod07\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core\\PhotoSharingApplication.Core.csproj",
+      "projectUniqueName": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod08\\Starter\\PhotoSharingApplication\\PhotoSharingApplication.Core\\PhotoSharingApplication.Core.csproj",
       "projectName": "PhotoSharingApplication.Core",
-      "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod07\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core\\PhotoSharingApplication.Core.csproj",
+      "projectPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod08\\Starter\\PhotoSharingApplication\\PhotoSharingApplication.Core\\PhotoSharingApplication.Core.csproj",
       "packagesPath": "C:\\Users\\SimonaC\\.nuget\\packages\\",
-      "outputPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod07\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Core\\obj\\",
+      "outputPath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod08\\Starter\\PhotoSharingApplication\\PhotoSharingApplication.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

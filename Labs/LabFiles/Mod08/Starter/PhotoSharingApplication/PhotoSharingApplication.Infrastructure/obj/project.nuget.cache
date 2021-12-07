@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "l9Fv2XkIQAfQvoqmu5U1jGYk4lqWEEsv0v3sTJZefVLIlSWYPqPOl5f3y3WsTj0e/D4FzVxw++MbEMHnNxt/hg==",
+  "dgSpecHash": "v4dAwb/wahBl8XgcR8TAWkNRyOxzlxwE/Y/hYVv27pgFUKu6UTTyXhgJGJgG7W0BQwXcq0zCKQuJnzVQUyWoig==",
   "success": true,
-  "projectFilePath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod07\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Infrastructure\\PhotoSharingApplication.Infrastructure.csproj",
+  "projectFilePath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod08\\Starter\\PhotoSharingApplication\\PhotoSharingApplication.Infrastructure\\PhotoSharingApplication.Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SimonaC\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

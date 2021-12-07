@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "hH0GzEEMP6HorGiIY3EWPocLdP9kaH85R17OXfkLdePuuV2JVbAH/HgwsX9ObtRcN5S5DPG7MoeU94BJB292YA==",
+  "dgSpecHash": "jMdeEb0e6rqNufbBLfdSqbHw9o/g3Zp842mRmtE//l6VeDlDMGx7qX0VzwC0YksL7H+ledbXsk72U71R7cY1ww==",
   "success": true,
-  "projectFilePath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod06\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Web\\PhotoSharingApplication.Web.csproj",
+  "projectFilePath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod07\\Starter\\PhotoSharingApplication\\PhotoSharingApplication.Web\\PhotoSharingApplication.Web.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SimonaC\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512",
     "C:\\Users\\SimonaC\\.nuget\\packages\\fluentvalidation.aspnetcore\\10.3.4\\fluentvalidation.aspnetcore.10.3.4.nupkg.sha512",
