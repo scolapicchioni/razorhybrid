@@ -1,7 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PhotoSharingApplication.Shared.Entities;
 using PhotoSharingApplication.Core.Interfaces;
-using PhotoSharingApplication.Infrastructure.Data;
+using PhotoSharingApplication.Infrastructure;
 using PhotoSharingApplication.Web;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -13,13 +13,6 @@ builder.Services.AddRazorPages();
 builder.Services
     .AddPhotoSharingServices()
     .AddPhotoSharingDb(builder.Configuration.GetConnectionString("Default"));
-
-//OpenApi Support
-builder.Services.AddControllers();
-
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
-
 
 var app = builder.Build();
 

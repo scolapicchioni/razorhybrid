@@ -15,8 +15,24 @@ At the end of the process, you should be able to register and logon to the site.
 
 ### Allow only authenticated users to add photos.  
 
-First, we need to add the concept of ownership to our Photo model, by adding a `SubmittedBy` property of type string to the Photo model.  
-Then, we need to save the User Name into our new `SubmittedBy` property during upload.   
+First, we need to add the concept of ownership to our `Photo` model, by adding a `SubmittedBy` property of type string to the Photo model.   
+
+```cs
+namespace PhotoSharingApplication.Shared.Entities;
+
+public class Photo {
+    public int Id { get; set; }
+    public string Title { get; set; } = string.Empty;
+    public string Description { get; set; } = string.Empty;
+    public byte[] PhotoFile { get; set; }
+    public string ContentType { get; set; } = string.Empty;
+    public string SubmittedBy { get; set; } = string.Empty;
+    public DateTime SubmittedOn { get; set; }
+    public List<Comment>? Comments { get; set; }
+}
+```
+Then, we need to save the User Name into our new `SubmittedBy` property during upload.  
+
 Authorization in ASP.NET Core is controlled with `AuthorizeAttribute` and its various parameters. In its most basic form, applying the `[Authorize]` attribute to a controller, action, or Razor Page, limits access to that component authenticated users.  
 Add the `[Authorize]` attribute to the `Upload` page.  
 In the `OnPost` method, add the following code:
