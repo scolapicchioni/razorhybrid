@@ -842,5 +842,3 @@ C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoS
 C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Client\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Client.dll
 C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Client\obj\Debug\net6.0\ref\PhotoSharingApplication.Blazor.Client.dll
 C:\CM\Web\RazorPages\Labs\LabFiles\Mod09\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Client\obj\Debug\net6.0\PhotoSharingApplication.Blazor.Client.pdb
-C:\CM\Web\RazorPages\Labs\LabFiles\Mod11\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Client\obj\Debug\net6.0\build-gz\EOpAxYJ1.gz
-C:\CM\Web\RazorPages\Labs\LabFiles\Mod11\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Client\obj\Debug\net6.0\build-gz\VYIWRV3R.gz

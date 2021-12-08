@@ -10,16 +10,19 @@ using Xunit;
 namespace PhotoSharingApplication.Web.UnitTests.MinimalApi;
 
 public class MinimalApiTests {
+    private Mock<IPhotosService> photosServiceMock;
+    public MinimalApiTests() {
+        photosServiceMock = new();
+    }
     [Fact]
     public async Task GetPhotoImage_ShouldReturnFile_WhenPhotoExists() {
         //Arrange
-        Mock<IPhotosService> mock = new();
         string expectedContentType = "jpg";
         byte[] expectedContent = new byte[] { 1, 2, 3, 4 };
         int id = 1;
         Photo photo = new() { ContentType = expectedContentType, PhotoFile = expectedContent };
-        mock.Setup(s => s.GetPhotoByIdAsync(id)).ReturnsAsync(photo);
-        await using var application = new PhotoSharingApplicationApp(mock);
+        photosServiceMock.Setup(s => s.GetPhotoByIdAsync(id)).ReturnsAsync(photo);
+        await using var application = new PhotoSharingApplicationApp(photosServiceMock);
 
         var client = application.CreateClient();
 
@@ -41,18 +44,16 @@ public class MinimalApiTests {
     [Fact]
     public async Task GetPhotoImage_ShouldReturnNotFound_WhenPhotoDoesNotExist() {
         //Arrange
-        Mock<IPhotosService> mock = new();
         int id = 1;
-        mock.Setup(s => s.GetPhotoByIdAsync(id)).ReturnsAsync(default(Photo));
-        await using var application = new PhotoSharingApplicationApp(mock);
+        photosServiceMock.Setup(s => s.GetPhotoByIdAsync(id)).ReturnsAsync(default(Photo));
+        await using var application = new PhotoSharingApplicationApp(photosServiceMock);
 
         var client = application.CreateClient();
 
         //Act
-        using HttpResponseMessage res = await client.GetAsync($"/photos/image/{id}");
+        using HttpResponseMessage response = await client.GetAsync($"/photos/image/{id}");
 
         //Assert
-        Assert.Equal(HttpStatusCode.NotFound, res.StatusCode);
-
+        Assert.Equal(HttpStatusCode.NotFound, response.StatusCode);
     }
 }
