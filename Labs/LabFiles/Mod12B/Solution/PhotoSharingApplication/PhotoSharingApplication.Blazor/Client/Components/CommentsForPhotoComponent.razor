@@ -1,0 +1,121 @@
+﻿@using Microsoft.AspNetCore.Authorization
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Components.Authorization
+
+@inject ICommentsService service
+@inject IAuthorizationService authService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+
+<h3>Add Comment</h3>
+
+@{
+
+}
+@if (isAuthenticated) {
+    <EditForm Model="@comment" OnValidSubmit="@HandleValidSubmit">
+        <FluentValidationValidator />
+        <ValidationSummary  class="text-danger"/>
+
+        <div class="mb-3">
+            <label class="form-label">
+                Title:
+                <InputText @bind-Value="comment.Title" class="form-control"/>
+            </label>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">
+                Body:
+                <InputTextArea @bind-Value="comment.Body" class="form-control"/>
+            </label>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </EditForm>
+}else {
+    <p>Login to add a comment</p>
+}
+<h3>Comments For Photo @PhotoId</h3>
+
+@if (comments is null)
+{
+    <p><em>No Comment</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Body</th>
+                <th>By</th>
+                <th>On</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var comment in comments)
+            {
+                <tr>
+                    <td>@comment.Title</td>
+                    <td>@comment.Body</td>
+                    <td>@comment.SubmittedBy</td>
+                    <td>@comment.SubmittedOn.ToShortDateString() @comment.SubmittedOn.ToShortTimeString()</td>
+                    <td>
+                        @if (MayDelete(comment.Id).Result) {
+                            <button @onclick="@(()=>DeleteComment(comment.Id))">Delete</button>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    <p>@Message</p>
+}
+
+@code {
+    [Parameter]
+    public int PhotoId { get; set; }
+
+    private List<Comment>? comments;
+
+    private Comment comment;
+
+    private string Message;
+
+    private ClaimsPrincipal User;
+    private bool isAuthenticated;
+    protected override async Task OnInitializedAsync(){
+        comment = new() { PhotoId = PhotoId };
+        comments = (await service.GetCommentsForPhotoAsync(PhotoId)).ToList();
+
+        var authState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        User = authState.User;
+        isAuthenticated = User.Identity.IsAuthenticated;
+    }
+
+    private async Task HandleValidSubmit()
+    {
+        comments.Add(await service.AddCommentAsync(comment));
+    }
+
+    private async Task<bool> MayDelete(int id) {
+        Comment comment = comments.First(c => c.Id == id);
+        AuthorizationResult result = await authService.AuthorizeAsync(User, comment, "CommentDeletionPolicy");
+        return result.Succeeded;
+    }
+
+    private async Task DeleteComment(int id) {
+        try {
+            Comment removedComment = await service.DeleteCommentAsync(id);
+            comments.Remove(comments.First(c => c.Id == removedComment.Id));
+        } catch (HttpRequestException ex ) when (ex.StatusCode == System.Net.HttpStatusCode.Forbidden ){
+            Message = ex.StatusCode + ex.Message;
+        } catch (HttpRequestException ex ) when (ex.StatusCode == System.Net.HttpStatusCode.Redirect){
+            Message = ex.StatusCode + ex.Message;
+        } catch (HttpRequestException ex ) when (ex.StatusCode == System.Net.HttpStatusCode.Unauthorized){
+            Message = ex.StatusCode + ex.Message;
+        } catch (Exception ex ){
+            Message = ex.GetType().Name + ex.Message;
+        }
+    }
+}

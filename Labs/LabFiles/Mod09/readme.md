@@ -70,7 +70,7 @@ Run the application, navigate to the details of a photo and verify that the coun
 We successfully integrated the Blazor Client into the `Photo/Details` Razor Page. Now it's time to build the actual Blazor Component.  
 We want the component to be agnostic of technologies and implementation, so we'll follow the same pattern of service and repository as we did for the server.  
 Because the entities and validators will be shared between client side and server side, we will move them to a new project.  
-Since the component will be prerendered, we will have to implement services and repositories both on the client and on the server. On the client, our repository will talk to the webapi using an `HttpClient`, while on the server the repository willl talk to the Api Controller by invoking it directly (no need for an Http call, since we're already in process on the server). For now, since we don't have a webapi yet, we'lll just use a fake `List<Comment>` to simulate the repository. 
+Since the component will be prerendered, we will have to implement services and repositories both on the client and on the server. On the client, our repository will talk to the webapi using an `HttpClient`, while on the server the repository willl talk to the Api Controller by invoking it directly (no need for an Http call, since we're already in process on the server). For now, since we don't have a webapi yet, we'll just use a fake `List<Comment>` to simulate the repository. 
 
 ### PhotoSharingApplication.Shared
 Let's start by creating a shared project where we can move models and validators
@@ -85,7 +85,7 @@ Now let's focus on the core of our client side, with interfaces and the service.
 
 - Add a new project of type Class Library. Name it `PhotoSharingApplication.Blazor.Core`.
 - Add a new folder. Name it `Interfaces`.
-- In the `Interfaces` folder, add a new file called `ICommentService.cs` with the `ICommentService` interface. Add methods to get comments for a specific photo given the photoId, add a comment and get one comment goven its id.
+- In the `Interfaces` folder, add a new file called `ICommentService.cs` with the `ICommentService` interface. Add methods to get comments for a specific photo given the photoId, add a comment and get one comment given its id.
 
 ```cs
 using PhotoSharingApplication.Shared.Entities;
@@ -143,8 +143,11 @@ public class CommentsService : ICommentsService {
 ```
 
 ### PhotoSharingApplication.Blazor.Infrastructure
-For the client infrastructure, we'll add a Repository that uses a fake list. We will replace it with a real repository later, where we will invoke our Api through an `HttpClient`.
+For the client infrastructure, we'll add a Repository that uses a fake list. We will replace it with two real repositories later:
+- One for the prerendering phase happening on the server, where we will talk to the Api Controller
+- One for the client side initialization, where we will invoke our Api through an `HttpClient`.
 
+These are the steps we need to take to implement the infrastructure:
 - Add a new project of type Class Library. Name it `PhotoSharingApplication.Blazor.Infrastructure`.
 - Add a new folder. Name it `Repositories`. 
 - In the `Repositories` folder, add a new file called `CommentRepositoryList.cs` with the `CommentRepositoryList` class. Implement the methods defined in the `ICommentsRepository` interface by using a private static `List<Comment>`.

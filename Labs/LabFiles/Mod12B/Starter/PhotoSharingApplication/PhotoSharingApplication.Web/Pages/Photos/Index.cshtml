@@ -1,0 +1,15 @@
+﻿@page
+@model PhotoSharingApplication.Web.Pages.Photos.IndexModel
+@{
+	ViewData["ShowDetailsButton"] = true;
+	ViewData["ShowDeleteButton"] = true;
+	ViewData["ShowConfirmDeleteButton"] = false;
+}
+<div class="row row-cols-1 row-cols-md-2 g-4">
+@foreach (Photo item in Model.Photos)
+{
+	<div class="col">
+	<partial name="_PhotoDetailsPartial" model="item" view-data="ViewData"></partial>
+	</div>
+}
+</div>

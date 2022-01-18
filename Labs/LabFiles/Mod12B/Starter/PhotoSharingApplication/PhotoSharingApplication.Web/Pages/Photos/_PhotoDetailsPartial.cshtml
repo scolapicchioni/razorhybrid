@@ -1,0 +1,36 @@
+﻿@model Photo
+@using Microsoft.AspNetCore.Authorization
+@inject IAuthorizationService AuthorizationService
+@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+	bool userIsAuthorized = (await AuthorizationService.AuthorizeAsync(User, Model, "PhotoDeletionPolicy")).Succeeded;
+	bool showDetailsButton = ViewData["ShowDetailsButton"] is bool showDetails && showDetails==true;
+	bool showDeleteButton = ViewData["ShowDeleteButton"] is bool showDelete && showDelete==true && userIsAuthorized;
+	bool showConfirmDeleteButton = ViewData["ShowConfirmDeleteButton"] is bool showConfirmDelete && showConfirmDelete==true && userIsAuthorized;
+}
+
+<div class="card card-tilted">
+	<img src="/photos/image/@Model.Id" class="card-img-top" alt="@Model.Title"/>
+	<div class="card-body">
+		<h5 class="card-title">@Model.Title</h5>
+		<p class="card-text">@Model.Description</p>
+		<p class="card-subtitle text-muted">Submitted By @Model.SubmittedBy On @Model.SubmittedOn.ToShortDateString() @Model.SubmittedOn.ToShortTimeString()</p>
+	</div>
+	@if (showDetailsButton || showDeleteButton || showConfirmDeleteButton) {
+		<div class="card-footer">
+			@if (showDetailsButton) {
+				<a asp-page="./Details" asp-route-id="@Model.Id" class="card-link">Details</a>
+			}
+			@if (showDeleteButton) {
+				<a asp-page="./Delete" asp-route-id="@Model.Id" class="card-link">Delete</a>
+			}
+			@if (showConfirmDeleteButton) {
+				<form method="post">
+					<input type="submit" class="btn btn-danger" value="Confirm Deletion" />
+				</form>
+			}
+		</div>
+	}
+</div>

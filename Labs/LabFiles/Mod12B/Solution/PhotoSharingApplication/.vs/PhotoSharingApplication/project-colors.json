@@ -1,0 +1,61 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "08fdc6da-d60e-4d62-9d7d-ec4018752178": {
+      "ProjectGuid": "08fdc6da-d60e-4d62-9d7d-ec4018752178",
+      "DisplayName": "PhotoSharingApplication.Web",
+      "ColorIndex": 0
+    },
+    "7a4cac3f-560e-4d65-a63d-afbfda574d0a": {
+      "ProjectGuid": "7a4cac3f-560e-4d65-a63d-afbfda574d0a",
+      "DisplayName": "PhotoSharingApplication.Core",
+      "ColorIndex": 1
+    },
+    "56d995c6-3f57-4197-b13c-293c0f3d645d": {
+      "ProjectGuid": "56d995c6-3f57-4197-b13c-293c0f3d645d",
+      "DisplayName": "PhotoSharingApplication.Infrastructure",
+      "ColorIndex": 2
+    },
+    "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3": {
+      "ProjectGuid": "a2fe74e1-b743-11d0-ae1a-00a0c90fffc3",
+      "DisplayName": "Miscellaneous Files",
+      "ColorIndex": -1
+    },
+    "f38d720a-dae6-4091-8dc8-b0c6862e150c": {
+      "ProjectGuid": "f38d720a-dae6-4091-8dc8-b0c6862e150c",
+      "DisplayName": "PhotoSharingApplication.Blazor.Server",
+      "ColorIndex": 3
+    },
+    "d0caf87e-fb74-43ca-870a-5301a91dbbe8": {
+      "ProjectGuid": "d0caf87e-fb74-43ca-870a-5301a91dbbe8",
+      "DisplayName": "PhotoSharingApplication.Blazor.Client",
+      "ColorIndex": 4
+    },
+    "c308698b-c8db-4fe0-bd8d-169fab359a35": {
+      "ProjectGuid": "c308698b-c8db-4fe0-bd8d-169fab359a35",
+      "DisplayName": "PhotoSharingApplication.BlazorServer",
+      "ColorIndex": 5
+    },
+    "89c662ff-a528-4905-9f5d-c484c5c6c7ee": {
+      "ProjectGuid": "89c662ff-a528-4905-9f5d-c484c5c6c7ee",
+      "DisplayName": "PhotoSharingApplication.Blazor.Core",
+      "ColorIndex": 6
+    },
+    "54a4f65b-549e-4d19-9dc7-9647eadde018": {
+      "ProjectGuid": "54a4f65b-549e-4d19-9dc7-9647eadde018",
+      "DisplayName": "PhotoSharingApplication.Blazor.Infrastructure",
+      "ColorIndex": 7
+    },
+    "e1eb5361-ba2f-4343-9a31-e508375c25f5": {
+      "ProjectGuid": "e1eb5361-ba2f-4343-9a31-e508375c25f5",
+      "DisplayName": "PhotoSharingApplication.Shared",
+      "ColorIndex": 8
+    },
+    "72b6c8e8-0d2b-45eb-bf3d-6b0175ee9a97": {
+      "ProjectGuid": "72b6c8e8-0d2b-45eb-bf3d-6b0175ee9a97",
+      "DisplayName": "PhotoSharingApplication.Web.UnitTests",
+      "ColorIndex": 9
+    }
+  },
+  "NextColorIndex": 10
+}
