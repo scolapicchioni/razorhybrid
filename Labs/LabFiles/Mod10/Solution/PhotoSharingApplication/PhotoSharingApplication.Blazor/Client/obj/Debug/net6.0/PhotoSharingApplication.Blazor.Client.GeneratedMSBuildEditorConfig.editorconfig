@@ -1,0 +1,27 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = false
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = browser
+build_property.EnableSingleFileAnalyzer = 
+build_property.EnableTrimAnalyzer = true
+build_property.IncludeAllContentForSelfExtract = 
+build_property.RootNamespace = PhotoSharingApplication.Blazor.Client
+build_property.RootNamespace = PhotoSharingApplication.Blazor.Client
+build_property.ProjectDir = C:\CM\Web\RazorPages\Labs\LabFiles\Mod10\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Client\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\CM\Web\RazorPages\Labs\LabFiles\Mod10\Solution\PhotoSharingApplication\PhotoSharingApplication.Blazor\Client
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/CM/Web/RazorPages/Labs/LabFiles/Mod10/Solution/PhotoSharingApplication/PhotoSharingApplication.Blazor/Client/Components/CommentsForPhotoComponent.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xDb21tZW50c0ZvclBob3RvQ29tcG9uZW50LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/CM/Web/RazorPages/Labs/LabFiles/Mod10/Solution/PhotoSharingApplication/PhotoSharingApplication.Blazor/Client/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 

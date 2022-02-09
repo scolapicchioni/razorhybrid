@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "hr96OOCLTanbbSyYc+S2Ipd8qDRz9haUGohgZyQU32iqzWIwEaR4KE8qmycYrgGdwVzbcdqWdW5glbnzGaCrXQ==",
+  "success": true,
+  "projectFilePath": "C:\\CM\\Web\\RazorPages\\Labs\\LabFiles\\Mod10\\Solution\\PhotoSharingApplication\\PhotoSharingApplication.Shared\\PhotoSharingApplication.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\SimonaC\\.nuget\\packages\\fluentvalidation\\10.3.4\\fluentvalidation.10.3.4.nupkg.sha512"
+  ],
+  "logs": []
+}
